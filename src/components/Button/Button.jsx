@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const Button = (props) => {
   function handleClassName() {
     return `button button__${props.buttonType} ${
-      !!props.additionalClass ? props.additionalClass : ""
+      props.additionalClass && props.additionalClass
     }`;
   }
 

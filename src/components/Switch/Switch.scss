@@ -1,0 +1,45 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgba(241, 100, 132, 0.15);
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -11px;
+    color: var(--mediumGray);
+    background-color: var(--darkGray);
+    border-radius: 100%;
+    padding: 4px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .switch__slider {
+    background-color: var(--primary);
+    left: calc(100% - 11px);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.label {
+  margin-left: 20px;
+  font-family: "Inter", sans-serif;
+  color: var(--darkGray);
+  font-weight: 500;
+  font-size: 16px;
+}
