@@ -1,0 +1,17 @@
+.link {
+    text-decoration: none;
+    color:var(--darkGray);
+    font-family: 'Open Sans';
+
+    &:visited{
+        color: var(--darkGray);
+    }
+
+    &:active{
+        color: var(--primary);
+    }
+    
+    &:hover{
+        color: var(--primary);
+    }
+}
