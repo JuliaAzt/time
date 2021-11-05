@@ -1,4 +1,5 @@
 import React from "react";
+import InputMask from "react-input-mask";
 import "./Input.scss";
 import PropTypes from "prop-types";
 
@@ -15,7 +16,8 @@ const Input = (props) => {
   return (
     <div className={handleClassName()}>
       <label>{props.label}</label>
-      <input
+      <InputMask
+        mask={props.mask}
         type={props.type}
         placeholder={props.placeholder}
         defaultValue={props.value}
@@ -32,6 +34,7 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   type: PropTypes.oneOf(["text", "number", "password"]),
   value: PropTypes.string,
+  mask: PropTypes.string,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   additionalClass: PropTypes.string,
@@ -41,6 +44,7 @@ Input.defaultProps = {
   type: "text",
   disabled: false,
   value: "",
+  mask: "",
   error: false,
   errorMessage: "",
   additionalClass: "",
