@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.scss";
-import Card from "./Card";
+import MiniCard from "./MiniCard";
 import { Row, Col } from "react-grid-system";
 import { FaUsers, FaPercent } from "react-icons/fa";
 import { IoPieChartSharp, IoStopwatchOutline } from "react-icons/io5";
@@ -17,7 +17,7 @@ const Dashboard = () => {
       </div>
       <Row>
         <Col sm={6} md={4} lg={3}>
-          <Card
+          <MiniCard
             title="Saldo de horas"
             content="3h 15m"
             percent={3.48}
@@ -28,7 +28,7 @@ const Dashboard = () => {
         </Col>
 
         <Col sm={6} md={4} lg={3}>
-          <Card
+          <MiniCard
             title="Tarefas em andamento"
             content="25"
             percent={-3.48}
@@ -38,7 +38,7 @@ const Dashboard = () => {
           />
         </Col>
         <Col sm={6} md={4} lg={3}>
-          <Card
+          <MiniCard
             title="Tarefas concluídas"
             content="924"
             percent={-1.1}
@@ -48,7 +48,7 @@ const Dashboard = () => {
           />
         </Col>
         <Col sm={6} md={4} lg={3}>
-          <Card
+          <MiniCard
             title="Avaliação"
             content="estrelas"
             percent={12}

@@ -29,6 +29,11 @@
       color: #32325d;
     }
 
+    &__icon-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+
     &__icon {
       font-size: 30px;
       width: 48px;

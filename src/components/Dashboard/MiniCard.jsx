@@ -1,11 +1,11 @@
 import React from "react";
-import "./Card.scss";
+import "./MiniCard.scss";
 import PropTypes from "prop-types";
 import ClassNames from "classnames";
 import { Row, Col } from "react-grid-system";
 import { FaArrowUp, FaArrowDown, FaMinus } from "react-icons/fa";
 
-const Card = (props) => {
+const MiniCard = (props) => {
   function handlePercentIcon(percent) {
     if (percent < 0) return <FaArrowDown />;
     if (percent > 0) return <FaArrowUp />;
@@ -24,7 +24,7 @@ const Card = (props) => {
           <span className="card-data__title">{props.title}</span>
           <span className="card-data__content">{props.content}</span>
         </Col>
-        <Col xs={4}>
+        <Col xs={4} className="card-data__icon-wrapper">
           <div
             style={{ background: props.backgroundColorIcon }}
             className="card-data__icon"
@@ -51,7 +51,7 @@ const Card = (props) => {
   );
 };
 
-Card.propTypes = {
+MiniCard.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   percent: PropTypes.number,
@@ -60,9 +60,9 @@ Card.propTypes = {
   backgroundColorIcon: PropTypes.string,
 };
 
-Card.defaultProps = {
+MiniCard.defaultProps = {
   percert: 0,
   observation: "",
 };
 
-export default Card;
+export default MiniCard;
