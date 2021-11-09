@@ -27,7 +27,7 @@ const Sidebar = (props) => {
   const sidebarWidthCollapsed = 93;
 
   return (
-    <div className="sidebar">
+    <aside className="sidebar">
       <ProSidebar
         collapsed={collapsed}
         width={sidebarWidth}
@@ -66,7 +66,7 @@ const Sidebar = (props) => {
         </SidebarContent>
       </ProSidebar>
       {props.children}
-    </div>
+    </aside>
   );
 };
 
