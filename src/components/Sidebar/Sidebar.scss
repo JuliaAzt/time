@@ -1,0 +1,120 @@
+$defaultGray: #8898aa;
+$defaultBlue: #5e72e4;
+$defaultRed: #f5365c;
+$defaultYellow: #ffd600;
+
+// React Sidebar Pro
+$sidebar-bg-color: #ffffff !default;
+$highlight-color: var(--darkGray) !default;
+@import "~react-pro-sidebar/dist/scss/styles.scss";
+
+.sidebar {
+  display: flex;
+  height: 100vh;
+  .pro-sidebar {
+    box-shadow: 0px 0px 32px rgba(136, 152, 170, 0.15);
+    font-family: "Open Sans";
+    // Cabeçalho com icone e titulo
+    &-header {
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      line-height: 45px;
+      border-bottom: none !important;
+      font-size: 36px;
+      height: 75px;
+      // Titulo
+      span {
+        margin-left: 3px;
+        font-size: 25px;
+      }
+      // Icone
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    // Primeiro menu lateral
+    .primary-menu {
+      position: relative;
+      // Borda na parte inferior
+      &::after {
+        transition: 0.2s all linear;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 17px;
+        width: 202px;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      // Efeito da borda com sidebar aberto ou fechado
+      &__collapsed {
+        &::after {
+          width: 56px;
+        }
+      }
+      // Itens do menu
+      .pro-menu-item {
+        font-weight: 400;
+        color: #000;
+        font-size: 14px;
+        line-height: 19px;
+        // Icone do item
+        .pro-icon {
+          font-size: 20px;
+        }
+        // Cores dos icones
+        &:nth-child(1),
+        &:nth-child(2) {
+          .pro-icon {
+            color: $defaultBlue;
+          }
+        }
+        &:nth-child(3) {
+          .pro-icon {
+            color: $defaultRed;
+          }
+        }
+        &:nth-child(4) {
+          .pro-icon {
+            color: $defaultYellow;
+          }
+        }
+      }
+    }
+    // Segundo menu lateral
+    .secondary-menu {
+      // Titulo, remoção dos efeitos
+      &__title {
+        .pro-item-content {
+          cursor: default;
+          color: $defaultGray;
+          &:hover {
+            color: $defaultGray;
+          }
+        }
+      }
+      // Itens do segundo menu
+      .pro-menu-item {
+        font-weight: 400;
+        color: $defaultGray;
+        font-size: 14px;
+        line-height: 19px;
+        // Icones dos itens
+        .pro-icon {
+          font-size: 24px;
+        }
+      }
+    }
+    // Removendo animação dos icones da estilização padrão da biblioteca
+    .pro-inner-item:hover {
+      .pro-icon-wrapper {
+        .pro-icon {
+          animation: none;
+        }
+      }
+    }
+  }
+}
