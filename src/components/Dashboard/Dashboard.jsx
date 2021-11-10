@@ -31,7 +31,7 @@ const Dashboard = () => {
           <MiniCard
             title="Tarefas em andamento"
             content="25"
-            percent={-3.48}
+            percent={0}
             observation="Desde o último mês"
             icon={<IoPieChartSharp />}
             backgroundColorIcon="#fb6340"

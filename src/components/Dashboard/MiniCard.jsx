@@ -6,15 +6,27 @@ import { Row, Col } from "react-grid-system";
 import { FaArrowUp, FaArrowDown, FaMinus } from "react-icons/fa";
 
 const MiniCard = (props) => {
-  function handlePercentIcon(percent) {
-    if (percent < 0) return <FaArrowDown />;
-    if (percent > 0) return <FaArrowUp />;
-    return <FaMinus />;
-  }
+  function handlePercent(percent, observation) {
+    const newPercent =
+      (percent < 0 ? percent * -1 : percent).toLocaleString("pt-Br") + " %";
 
-  function handelPercent(percent) {
-    let newPercent = percent < 0 ? percent * -1 : percent;
-    return newPercent.toLocaleString("pt-Br") + " %";
+    const percentIcon =
+      percent < 0 ? <FaArrowDown /> : percent > 0 ? <FaArrowUp /> : <FaMinus />;
+
+    const classNames = ClassNames(
+      "card-data__info",
+      percent > 0 && "up",
+      percent < 0 && "down"
+    );
+
+    return (
+      <span className={classNames}>
+        {percentIcon} {newPercent}
+        {observation && (
+          <span className="card-data__observation">{observation}</span>
+        )}
+      </span>
+    );
   }
 
   return (
@@ -33,20 +45,7 @@ const MiniCard = (props) => {
           </div>
         </Col>
       </Row>
-
-      <span
-        className={ClassNames(
-          "card-data__info",
-          props.percent > 0 && "up",
-          props.percent < 0 && "down"
-        )}
-      >
-        {handlePercentIcon(props.percent)}
-        {handelPercent(props.percent)}
-        {props.observation && (
-          <span className="card-data__observation">{props.observation}</span>
-        )}
-      </span>
+      {handlePercent(props.percent, props.observation)}
     </div>
   );
 };
