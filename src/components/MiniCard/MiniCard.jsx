@@ -14,7 +14,7 @@ const MiniCard = (props) => {
       percent < 0 ? <FaArrowDown /> : percent > 0 ? <FaArrowUp /> : <FaMinus />;
 
     const classNames = ClassNames(
-      "card-data__info",
+      "minicard-data__info",
       percent > 0 && "up",
       percent < 0 && "down"
     );
@@ -23,23 +23,23 @@ const MiniCard = (props) => {
       <span className={classNames}>
         {percentIcon} {newPercent}
         {observation && (
-          <span className="card-data__observation">{observation}</span>
+          <span className="minicard-data__observation">{observation}</span>
         )}
       </span>
     );
   }
 
   return (
-    <div className="card">
-      <Row className="card-data">
-        <Col xs={8} className="card-data__header">
-          <span className="card-data__title">{props.title}</span>
-          <span className="card-data__content">{props.content}</span>
+    <div className="minicard">
+      <Row className="minicard-data">
+        <Col xs={8} className="minicard-data__header">
+          <span className="minicard-data__title">{props.title}</span>
+          <span className="minicard-data__content">{props.content}</span>
         </Col>
-        <Col xs={4} className="card-data__icon-wrapper">
+        <Col xs={4} className="minicard-data__icon-wrapper">
           <div
             style={{ background: props.backgroundColorIcon }}
-            className="card-data__icon"
+            className="minicard-data__icon"
           >
             {props.icon && props.icon}
           </div>

@@ -1,11 +1,11 @@
 import "./App.scss";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./components/Dashboard";
+import Sidebar from "./modules/Sidebar";
+import Main from "./pages/Main";
 
 function App() {
   return (
     <Sidebar>
-      <Dashboard />
+      <Main />
     </Sidebar>
   );
 }

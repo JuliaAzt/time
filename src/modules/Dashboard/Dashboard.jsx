@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.scss";
-import MiniCard from "./MiniCard";
+import MiniCard from "../../components/MiniCard";
 import { Row, Col } from "react-grid-system";
 import { FaUsers, FaPercent } from "react-icons/fa";
 import { IoPieChartSharp, IoStopwatchOutline } from "react-icons/io5";
