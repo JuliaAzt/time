@@ -8,16 +8,18 @@ const Grid = () => {
   return (
     <Container fluid justify="center">
       <Row>
-        <Col xs={12} sm={6} md={4} lg={3} xxl={2}>
-          <Card
-            image={data[0].image}
-            title={data[0].title}
-            author={data[0].author}
-            content={data[0].content}
-            categories={data[0].categories}
-            rating={data[0].rating}
-          />
-        </Col>
+        {data.map((el) => (
+          <Col key={el.id} xs={12} sm={6} md={4} xxl={3}>
+            <Card
+              image={el.image}
+              title={el.title}
+              author={el.author}
+              content={el.content}
+              categories={el.categories}
+              rating={el.rating}
+            />
+          </Col>
+        ))}
       </Row>
     </Container>
   );

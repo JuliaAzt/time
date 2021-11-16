@@ -16,5 +16,57 @@
   &-content {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+
+    span {
+      font-family: "Open Sans", sans-serif;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 5px;
+    }
+
+    &__author {
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--darkGray);
+    }
+
+    &__text {
+      margin: 24px 0;
+      overflow: hidden;
+      text-align: justify;
+      line-height: 16px;
+      max-height: 70px;
+      transition: all 0.4s ease-in-out;
+      cursor: default;
+      color: #333333 !important;
+      font-size: 12px !important;
+    }
+
+    &:hover {
+      .card-content__text {
+        max-height: 250px;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+
+      &-rating {
+        color: var(--primary);
+        font-size: 12px;
+        span {
+          margin-left: 4px;
+          color: #000000;
+          font-weight: bold;
+          font-family: "Open Sans", sans-serif;
+        }
+      }
+    }
   }
 }
