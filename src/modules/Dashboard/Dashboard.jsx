@@ -51,7 +51,7 @@ const Dashboard = () => {
         <Col sm={6} md={4} lg={3}>
           <MiniCard
             title="Avaliação"
-            content={<Rating />}
+            content={<Rating value={4.5} />}
             percent={12}
             observation="Desde o último mês"
             icon={<FaPercent />}
