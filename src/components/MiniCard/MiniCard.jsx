@@ -52,7 +52,7 @@ const MiniCard = (props) => {
 
 MiniCard.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.any.isRequired,
   percent: PropTypes.number,
   observation: PropTypes.string,
   icon: PropTypes.node,

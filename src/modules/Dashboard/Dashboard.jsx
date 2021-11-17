@@ -4,6 +4,7 @@ import MiniCard from "../../components/MiniCard";
 import { Row, Col } from "react-grid-system";
 import { FaUsers, FaPercent } from "react-icons/fa";
 import { IoPieChartSharp, IoStopwatchOutline } from "react-icons/io5";
+import Rating from "../../components/Rating";
 
 const Dashboard = () => {
   return (
@@ -50,7 +51,7 @@ const Dashboard = () => {
         <Col sm={6} md={4} lg={3}>
           <MiniCard
             title="Avaliação"
-            content="estrelas"
+            content={<Rating />}
             percent={12}
             observation="Desde o último mês"
             icon={<FaPercent />}
