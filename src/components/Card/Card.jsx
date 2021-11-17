@@ -41,6 +41,7 @@ const Card = (props) => {
                 );
               })}
           </div>
+
           <span className="card-content__footer-rating">
             <FaStar />
             <span>{props.rating}</span>
