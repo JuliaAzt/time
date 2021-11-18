@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Input from "../Input";
-import Button from "../Button";
-import Heading from "../../Typography/Heading/Heading";
-import Switch from "../Switch";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
+import Heading from "../../Typography/Heading";
+import Switch from "../../components/Switch";
 import { Row } from "react-grid-system";
 import "./SignUp.scss";
 

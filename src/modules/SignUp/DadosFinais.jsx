@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button";
-import Heading from "../../Typography/Heading/Heading";
+import Button from "../../components/Button";
+import Heading from "../../Typography/Heading";
 import { Row, Col } from "react-grid-system";
 import { MdOutlineMarkEmailUnread as EmailIcon } from "react-icons/md";
 import "./SignUp.scss";
