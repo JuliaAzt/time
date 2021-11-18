@@ -1,0 +1,20 @@
+.login {
+    &__container {
+        box-sizing: border-box;
+        width: 100%;
+        background: var(--lightGray);
+        padding: 3rem 2rem;
+        border-radius: 0.5rem;
+    }
+    &__heading {
+        margin-bottom: 3rem;
+    }
+    &__forgotpsw {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+    &__signup {
+        padding-left: 1rem;
+        color: var(--black) !important;
+    }
+}
