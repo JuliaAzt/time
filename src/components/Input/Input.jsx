@@ -4,18 +4,18 @@ import "./Input.scss";
 import PropTypes from "prop-types";
 
 const Input = (props) => {
-
   function handleClassName() {
     return `input__group ${props.additionalClass} ${
-      props.error ? 'error' : ''
+      props.error ? "error" : ""
     }`;
   }
 
   const hasError = props.error ? <span>{props.errorMessage}</span> : "";
+  const label = props.label !== "" ? <label>{props.label}</label> : "";
 
   return (
     <div className={handleClassName()}>
-      <label>{props.label}</label>
+      {label}
       <InputMask
         mask={props.mask}
         type={props.type}
@@ -23,6 +23,7 @@ const Input = (props) => {
         defaultValue={props.value}
         onChange={props.onChange}
         disabled={props.disabled}
+        required={props.required}
       />
       {hasError}
     </div>
@@ -31,8 +32,9 @@ const Input = (props) => {
 
 Input.propTypes = {
   disabled: PropTypes.bool,
+  required: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
-  type: PropTypes.oneOf(["text", "number", "password"]),
+  type: PropTypes.oneOf(["text", "number", "password", "email"]),
   value: PropTypes.string,
   mask: PropTypes.string,
   error: PropTypes.bool,
@@ -43,6 +45,7 @@ Input.propTypes = {
 Input.defaultProps = {
   type: "text",
   disabled: false,
+  required: false,
   value: "",
   mask: "",
   error: false,
