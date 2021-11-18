@@ -1,0 +1,40 @@
+.signup {
+    &__stepper {
+        button.active,
+        button.completed {
+            padding-top: 4px;
+            background-color: var(--primary);
+        }
+    }
+    &__icon {
+        font-size: 5rem;
+        color: var(--darkGray);
+    }
+    &__paragraph {
+        font-size: 1.1b rem;
+        font-family: "Inter";
+        color: var(--darkGray);
+        margin: 4rem 0rem 5rem 0rem;
+    }
+    &__switch {
+        margin: 1.5rem 0rem 0.25rem 1rem;
+    }
+    &__container {
+        box-sizing: border-box;
+        width: 100%;
+        background: var(--lightGray);
+        padding: 3rem 2rem;
+        border-radius: 0.5rem;
+    }
+    &__heading {
+        margin-bottom: 3rem;
+    }
+    &__forgotpsw {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+    &__signup {
+        padding-left: 1rem;
+        color: var(--black) !important;
+    }
+}
