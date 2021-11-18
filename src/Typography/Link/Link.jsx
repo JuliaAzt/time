@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { Link as LinkRouter } from "react-router-dom";
 import "./Link.scss";
 
 const Link = (props) => {
@@ -9,9 +9,13 @@ const Link = (props) => {
   }
 
   return (
-    <a href={props.href} className={handleClassName()} style={props.style}>
+    <LinkRouter
+      to={{ pathname: props.href }}
+      className={handleClassName()}
+      style={props.style}
+    >
       {props.children}
-    </a>
+    </LinkRouter>
   );
 };
 
