@@ -1,24 +1,20 @@
-import logo from "./logo.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-
+import Home from "./components/Home/Home";
+import SearchBar from "./components/SearchBar/SearchBar";
 function App() {
+  let loggedIn = false;
+  /*<Route exact path="/">
+    {loggedIn ? <h1>Entrou</h1> : <Redirect to="/login" />}
+  </Route>*/
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<SearchBar />}></Route>
+        <Route path="/login" element={<Home variant="Login" />}></Route>
+        <Route path="/signup" element={<Home variant="SignUp" />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
