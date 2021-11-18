@@ -1,12 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import Heading from "../../Typography/Heading/Heading";
-import Login from "../Login/Login";
+import Heading from "../../Typography/Heading";
+import Login from "../../modules/Login";
+import SignUp from "../../modules/SignUp";
 import "./Home.scss";
-
 import logo from "../../assets/logo.svg";
 import people from "../../assets/people.png";
-import SignUp from "../SignUp/SignUp";
 
 const Home = (props) => {
   const variant = {

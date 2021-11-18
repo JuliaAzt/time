@@ -1,8 +1,8 @@
 import React from "react";
-import Input from "../Input";
-import Button from "../Button";
-import Heading from "../../Typography/Heading/Heading";
-import Link from "../../Typography/Link/Link";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
+import Heading from "../../Typography/Heading";
+import Link from "../../Typography/Link";
 import { Row } from "react-grid-system";
 import "./SignUp.scss";
 
