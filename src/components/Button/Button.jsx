@@ -1,12 +1,16 @@
 import React from "react";
 import "./Button.scss";
 import PropTypes from "prop-types";
+import ClassNames from "classnames";
 
 const Button = (props) => {
   function handleClassName() {
-    return `button button__${props.buttonType} ${
+    const classNames = ClassNames(
+      "button",
+      `button__${props.buttonType}`,
       props.additionalClass && props.additionalClass
-    }`;
+    );
+    return classNames;
   }
 
   return (

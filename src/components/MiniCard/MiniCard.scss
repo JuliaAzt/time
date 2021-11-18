@@ -1,0 +1,69 @@
+.minicard {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 24px 16px;
+  margin-bottom: 16px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  span {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  &-data {
+    &__header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      color: #8898aa;
+      font-size: 14px;
+    }
+
+    &__content {
+      font-size: 20px;
+      color: #32325d;
+    }
+
+    &__icon-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__icon {
+      font-size: 30px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 24px;
+      color: #fff;
+    }
+
+    &__info {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      color: var(--darkGray);
+      &.up {
+        color: #2dce89;
+      }
+      &.down {
+        color: #e53e3e;
+      }
+      svg {
+        margin-right: 4px;
+      }
+    }
+    &__observation {
+      margin-left: 8px;
+      font-weight: 300;
+      color: var(--darkGray);
+    }
+  }
+}
