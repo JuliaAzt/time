@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Card.scss";
-import Paragraph from "../../Typography/Paragraph/Paragraph";
+import Paragraph from "../../Typography/Paragraph";
 import Tag from "../Tag";
 import { FaStar } from "react-icons/fa";
 
