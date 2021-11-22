@@ -10,7 +10,7 @@ import {
   MenuItem,
 } from "react-pro-sidebar";
 // Icones
-import { FaTv, FaUserAlt } from "react-icons/fa";
+import { FaTv, FaUserAlt, FaUserCircle } from "react-icons/fa";
 import {
   IoMdPlanet,
   IoMdRocket,
@@ -19,10 +19,12 @@ import {
 } from "react-icons/io";
 import { MdOutlineFormatListBulleted } from "react-icons/md";
 import { BiTime } from "react-icons/bi";
+import { RiKey2Fill } from "react-icons/ri";
 
 const Sidebar = (props) => {
   const [collapsed, setCollapesed] = useState(true);
 
+  const isLogged = false;
   const sidebarWidth = 292;
   const sidebarWidthCollapsed = 93;
 
@@ -44,15 +46,25 @@ const Sidebar = (props) => {
             <Menu
               className={ClassNames(
                 "primary-menu",
-                collapsed && "primary-menu__collapsed"
+                collapsed && "primary-menu__collapsed",
+                isLogged && "logged"
               )}
             >
               <MenuItem icon={<FaTv />}>Página inicial</MenuItem>
-              <MenuItem icon={<IoMdPlanet />}>Minhas publicações</MenuItem>
-              <MenuItem icon={<MdOutlineFormatListBulleted />}>
-                Lista de tarefas
-              </MenuItem>
-              <MenuItem icon={<FaUserAlt />}>Perfil do usuário</MenuItem>
+              {isLogged ? (
+                <>
+                  <MenuItem icon={<IoMdPlanet />}>Minhas publicações</MenuItem>
+                  <MenuItem icon={<MdOutlineFormatListBulleted />}>
+                    Lista de tarefas
+                  </MenuItem>
+                  <MenuItem icon={<FaUserAlt />}>Perfil do usuário</MenuItem>
+                </>
+              ) : (
+                <>
+                  <MenuItem icon={<RiKey2Fill />}>Login</MenuItem>
+                  <MenuItem icon={<FaUserCircle />}>Registro</MenuItem>
+                </>
+              )}
             </Menu>
             <Menu className="secondary-menu">
               {!collapsed && (
