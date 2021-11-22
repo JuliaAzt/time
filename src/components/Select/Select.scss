@@ -1,4 +1,4 @@
-.input__group {
+.select__group {
     border: none;
     border-color: transparent;
     box-shadow: none;
@@ -8,16 +8,15 @@
     label {
         font-family: "Montserrat", sans-serif;
         font-size: 0.8rem;
-        //margin-bottom: 0.2rem;
     }
 
-    & > input {
+    & > select {
         font-family: "Inter", sans-serif;
         background: var(--mediumGray);
         color: var(--darkGray);
         border-radius: 0.5rem;
         box-sizing: border-box;
-        padding: 1rem 0.5rem 1rem 1rem;
+        padding: 0.9rem 0.5rem 1rem 1rem;
         border: none;
         width: 100%;
 
