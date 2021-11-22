@@ -2,18 +2,31 @@ import React from "react";
 import "./Dashboard.scss";
 import MiniCard from "../../components/MiniCard";
 import { Row, Col } from "react-grid-system";
-import { FaUsers, FaPercent } from "react-icons/fa";
+import { FaUsers, FaPercent, FaUserCircle } from "react-icons/fa";
 import { IoPieChartSharp, IoStopwatchOutline } from "react-icons/io5";
 import Rating from "../../components/Rating";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
+  const isLogged = false;
   return (
     <section className="dashboard">
       <div className="dashboard-header">
         <span className="dashboard-header__title">PÁGINA INICIAL</span>
         <div className="dashboard-header__user">
-          <span>Michael Scott</span>
-          <div className="photo"></div>
+          {isLogged ? (
+            <>
+              <span className="user-text">Michael Scott</span>
+              <div className="photo"></div>
+            </>
+          ) : (
+            <>
+              <Link className="user-text" to="/login">
+                Fazer Login
+              </Link>
+              <FaUserCircle className="user-icon" />
+            </>
+          )}
         </div>
       </div>
       <Row>

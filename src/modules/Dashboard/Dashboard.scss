@@ -20,18 +20,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      span {
+      .user-text {
         font-family: "Open Sans", sans-serif;
         font: 400;
         font-size: 16px;
         color: #fff;
+        text-decoration: none;
       }
-      div {
+      .photo {
         background-image: url("./../../assets/user-photo.png");
-        width: 39px;
-        height: 39px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
         margin-left: 8px;
+      }
+      .user-icon {
+        font-size: 38px;
+        margin-left: 8px;
+        color: #fff;
       }
     }
   }
